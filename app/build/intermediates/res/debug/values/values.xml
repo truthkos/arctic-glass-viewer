@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/taiga-ci/Documents/arctic-glass-viewer/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="card_margin">40px</dimen>
+    <dimen name="table_divider_height">1px</dimen>
+    <dimen name="table_divider_margin">8px</dimen>
+    <!-- From: file:/Users/taiga-ci/Documents/arctic-glass-viewer/app/src/main/res/values/string.xml -->
+    <eat-comment/>
+    <string name="app_name">Arctic Glass Viewer</string>
+    <string name="loading">Loading</string>
+    <string name="menu_coder">Pick a location</string>
+    <string name="menu_coder0">Pick a sensor</string>
+    <string name="menu_coder1">Toolik Lake</string>
+    <string name="menu_coder11">pups 1</string>
+    <string name="menu_coder2">Brooks Range</string>
+    <string name="menu_coder22">pups 2</string>
+    <string name="menu_coder3">Atigun River</string>
+    <string name="menu_coder33">pups 3</string>
+    <string name="menu_coder4">Toolik Inlet</string>
+    <string name="menu_coder44">pups 4</string>
+    <string name="menu_coder5">Heath Tundra</string>
+    <string name="menu_coder55">pups 5</string>
+    <string name="menu_coder66">pups 6</string>
+    <string name="menu_coderx">Pick a trap</string>
+    <string name="menu_coderx1">haul road</string>
+    <string name="menu_coderx2">sauna</string>
+    <string name="menu_coderx3">inlet</string>
+    <string name="text_card_alert">Ready...</string>
+    <string name="text_card_alert_description">This is just the ALERT layout</string>
+    <string name="text_card_author_heading">Joe Lastname</string>
+    <string name="text_card_author_subheading">Mountain View, California</string>
+    <string name="text_card_author_text">The AUTHOR layout lets you display a message or conversation with a focus on the author.</string>
+    <string name="text_card_builder">Check Sensors</string>
+    <string name="text_card_caption">The CAPTION layout.</string>
+    <string name="text_card_caption_with_icon">The CAPTION layout with an icon.</string>
+    <string name="text_card_columns_fixed">This is the COLUMNS_FIXED layout. The text size is always the same.</string>
+    <string name="text_card_columns_not_fixed">This is the COLUMNS layout with dynamic text.</string>
+    <string name="text_card_columns_with_icon">You can even put a centered icon on a COLUMNS card instead of a mosaic.</string>
+    <string name="text_card_footnote">Tap to toggle voice commands.</string>
+    <string name="text_card_menu">MENU layout</string>
+    <string name="text_card_menu_description">Optional menu description</string>
+    <string name="text_card_no_action">This card has no associated action.</string>
+    <string name="text_card_scroll_view">Check a Trap</string>
+    <string name="text_card_tap_to_delete">Tap to delete this card.</string>
+    <string name="text_card_tap_to_insert_after">Tap to insert another card after this one.</string>
+    <string name="text_card_tap_to_insert_before">Tap to insert another card before this one.</string>
+    <string name="text_card_tap_to_insert_begin">Tap to insert another card at the beginning.</string>
+    <string name="text_card_tap_to_insert_end">Tap to insert another card at the end.</string>
+    <string name="text_card_tap_to_navigate_begin">Tap to navigate to the first card.</string>
+    <string name="text_card_tap_to_navigate_end">Tap to navigate to the last card.</string>
+    <string name="text_card_text_fixed">This is the TEXT_FIXED layout. The text size is always the same.</string>
+    <string name="text_card_text_not_fixed">This is the TEXT layout. The text size will adjust dynamically.</string>
+    <string name="text_card_text_stack_indicator">A stack indicator can be added to the corner of a card to indicate that it represents a bundle of other items.</string>
+    <string name="text_card_text_with_images">You can also add images to the background of a TEXT card.</string>
+    <string name="text_card_timestamp">just now</string>
+    <string name="text_card_title">TITLE Card</string>
+    <string name="text_card_title_icon">TITLE Card</string>
+    <string name="text_voice_menu">Time Lapse Gallery</string>
+    <string name="voice_menu_explanation">Tap to the toggle voice-activated menu.
+    </string>
+    <string name="voice_trigger">Arctic Glass</string>
+    <!-- From: file:/Users/taiga-ci/Documents/arctic-glass-viewer/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="MenuTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>
