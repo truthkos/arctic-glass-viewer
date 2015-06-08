@@ -65,6 +65,14 @@
     <string name="menu_coder4">Toolik Inlet</string>
     <string name="menu_coder5">Heath Tundra</string>
 
+    <!-- Used to build the ur string. -->
+    <string name="toolik_lake">lake</string>
+    <string name="brooks_range">brooks</string>
+    <string name="atigun">Atigun River</string>
+    <string name="inlet">Toolik Inlet</string>
+    <string name="heath_tundra">Heath Tundra</string>
+
+
     <!-- Used to build the sensor voice menu. -->
     <string name="menu_coder0">Pick a sensor</string>
     <string name="menu_coder11">pups 1</string>
@@ -83,6 +91,6 @@
     <string name="voice_menu_explanation">Tap to the toggle voice-activated menu.
     </string>
 
-    <string name="loading">Loading</string>
+    <string name="loading">Swipe forward to view.</string>
 
 </resources>

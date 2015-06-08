@@ -6,6 +6,8 @@ import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
 import com.google.android.glass.widget.Slider;
 import com.google.android.glass.sample.apidemo.R;
+import com.google.android.glass.touchpad.GestureDetector;
+import com.google.android.glass.touchpad.Gesture;
 
 
 import android.app.Activity;
@@ -44,6 +46,8 @@ public final class SliderActivity extends Activity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        Bundle archive = getIntent().getExtras();
+        int mPicture = archive.getInt("mPicture");
 
         // Ensure screen stays on during demo.
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -61,7 +65,11 @@ public final class SliderActivity extends Activity {
         setContentView(mCardScroller);
         mSlider = Slider.from(mCardScroller);
         startSlider();
-        String[] url = {"http://edc.tfs.alaska.edu/webcam/2015/lake/lake_20150606_1200.jpg"};
+        String year = "2014";
+        String month = "06";
+        String day = "06";
+        String location = "lake";
+        String[] url = {"http://edc.tfs.alaska.edu/webcam/" + year + "/" + location + "/" + location + "_" + year + month + day + "_1200.jpg"};
         new DownloadImageTask().execute(url);
     }
 
@@ -127,15 +135,18 @@ public final class SliderActivity extends Activity {
             if (result != null) {
                 mCardAdapter.mCards.add(new CardBuilder(getBaseContext(), CardBuilder.Layout.TEXT)
                         .addImage(result));
-           //     mCardAdapter = new CardAdapter(createCard(getBaseContext(), result));
                 mCardAdapter.notifyDataSetChanged();
             }
         }
     }
-
-
-
+    private int getArchive(int mPicture) {
+        switch (mPicture) {
+            case 1:  return R.string.toolik_lake;
+            case 2:  return R.string.brooks_range;
+            case 3:  return R.string.menu_coder3;
+            case 4:  return R.string.menu_coder4;
+            case 5:  return R.string.menu_coder5;
+            default: return R.string.menu_coder;
+        }
+    }
 }
-
-
-//        mCardScroller.setAdapter(new CardAdapter(createCards(this)));

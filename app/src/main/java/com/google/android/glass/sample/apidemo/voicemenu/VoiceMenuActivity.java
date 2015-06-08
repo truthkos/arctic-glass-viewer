@@ -19,18 +19,16 @@ package com.google.android.glass.sample.apidemo.voicemenu;
 import com.google.android.glass.media.Sounds;
 import com.google.android.glass.sample.apidemo.R;
 import com.google.android.glass.sample.apidemo.card.CardAdapter;
+import com.google.android.glass.sample.apidemo.card.SliderActivity;
 import com.google.android.glass.view.WindowUtils;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollView;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,10 +36,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +73,7 @@ public final class VoiceMenuActivity extends Activity {
                 AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
                 am.playSoundEffect(Sounds.TAP);
 
-        //        // Toggles voice menu. Invalidates menu to flag change.
+                //        // Toggles voice menu. Invalidates menu to flag change.
                 mVoiceMenuEnabled = !mVoiceMenuEnabled;
                 getWindow().invalidatePanelMenu(WindowUtils.FEATURE_VOICE_COMMANDS);
             }
@@ -123,7 +117,7 @@ public final class VoiceMenuActivity extends Activity {
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
         if (featureId == WindowUtils.FEATURE_VOICE_COMMANDS) {
             switch (item.getItemId()) {
-                case R.id.menu_coder:   mPicture = 4;  break;
+                case R.id.menu_coder:   mPicture = 0;  break;
                 case R.id.menu_coder1:   mPicture = 1; break;
                 case R.id.menu_coder2:   mPicture = 2; break;
                 case R.id.menu_coder3:   mPicture = 3; break;
@@ -132,6 +126,11 @@ public final class VoiceMenuActivity extends Activity {
                 default: return true;  // No change.
             }
             mCardScroller.setAdapter(new CardAdapter(createCards(this)));
+            if(mPicture != 0) {
+                Intent intent = new Intent(getBaseContext(), SliderActivity.class);
+                intent.putExtra("mPicture", mPicture);
+                startActivity(intent);
+            }
             return true;
         }
         return super.onMenuItemSelected(featureId, item);
@@ -173,12 +172,4 @@ public final class VoiceMenuActivity extends Activity {
             default: return R.drawable.toolik_inlet_menu;
         }
     }
-
-    private List<CardBuilder> createCard(Context context, Drawable drawable) {
-        ArrayList<CardBuilder> cards = new ArrayList<CardBuilder>();
-        cards.add(new CardBuilder(context, CardBuilder.Layout.TEXT)
-                .addImage(drawable));
-        return cards;
-    }
-
 }

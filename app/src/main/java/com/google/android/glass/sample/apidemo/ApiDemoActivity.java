@@ -87,7 +87,7 @@ public class ApiDemoActivity extends Activity {
         cards.add(CHECK_TRAPS, new CardBuilder(context, CardBuilder.Layout.TEXT)
                 .setText(R.string.text_card_scroll_view));
         cards.add(GALLERY, new CardBuilder(context, CardBuilder.Layout.TEXT)
-                .setText("Time Lapse Gallery"));
+                .setText("Image Gallery"));
         return cards;
     }
 
