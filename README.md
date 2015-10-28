@@ -1,25 +1,15 @@
-ApiDemo
+Arctic Glass
 =======
 
-This sample is a gallery of some GDK APIs usage:
+This is a location-specific application built for researchers and students to use while conducting their work on the North Slope of Alaska. The application is primarily controlled through voice command, and includes a wildlife identification feature, retrieval of archival time-lapse imagery, and real-time sensor monitoring. 
 
-- Card and CardScrollView
-- GestureDetector
-- Theming with textAppearance
-- OpenGL in a LiveCard
+Arctic Glass is programmed in the Java language and makes heavy use of many features of the Google Glass API, specifically menu navigation though the Voice API. The current version of the software has the capability to access data on-demand from the web, but the feature is only partially enabled right now due to time constraints and priority while building the proof-of-concept for field testing.
 
-## Getting started
+Features:
 
-Check out our documentation to learn how to get started on
-https://developers.google.com/glass/gdk/index
+- Arctic Flora & Fauna Identification Guide
+- Real-time sensor monitoring for PUPS (IoT) devices
+- Real-time live trap monitoring
+- Time-lapse archive image retrieval (for overlay view on-site)
 
-## Running the sample on Glass
 
-You can use your IDE to compile and install the sample or use
-[`adb`](https://developer.android.com/tools/help/adb.html)
-on the command line:
-
-    $ adb install -r ApiDemo.apk
-
-To start the sample, say "ok glass, show me a demo" from the Glass clock
-screen or use the touch menu.
